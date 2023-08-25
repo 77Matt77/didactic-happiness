@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Yatra+One&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="/media/plume2.png" type="image/x-icon">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <header><img src="/media/plume2.png" alt="">
+
+        <h1>La porte Plume </h1>
+    </header>
+
+    <button class="tablink" onclick="openPage('Home', this, '')" id="defaultOpen">Accueil</button>
+    <button class="tablink" onclick="openPage('News', this, '')">J'écrit pour Vous</button>
+    <button class="tablink" onclick="openPage('Contact', this, '')">Je classe pour Vous</button>
+    <button class="tablink" onclick="openPage('About', this, '')">Administratif pour Vous</button>
+    <button class="tablink" onclick="openPage('News', this, '')">CGU</button>
+    <button class="tablink" onclick="openPage('Contact', this, '')">Contact</button>
+
+    <div id="Home" class="tabcontent">
+
+        <div class="container">
+
+            <div class="imageAccueil">
+                <img src="/media/colette.jpg" alt="Colette">
+            </div>
+
+
+            <h3 class="Home">Je me présente : Myriam Faucheux Gavalda</h3>
+            <div class="textADroite">
+
+
+
+                <p> je suis <span>écrivain public</span> passionnée, et une véritable artiste des mots.
+                    Avec une plume experte et une passion pour la <span>communication écrite</span>, je me distingue
+                    comme une créatrice de contenu exceptionnel.
+                    Je suis excellente dans l'art de donner vie aux idées, de transformer les pensées en
+                    <span>mots</span> et d'insuffler de la clarté et de l'éloquence dans chaque projet que
+                    j'entreprends.
+                    Mon dévouement envers l'écriture et mon talent pour comprendre les besoins de mes
+                    clients
+                    font de moi une collaboratrice précieuse pour tous ceux qui cherchent à transmettre efficacement
+                    leur message par écrit.
+                    Explorez mon univers <span>littéraire</span> et découvrez comment je transforme chaque projet en une
+                    œuvre d'art littéraire.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="News" class="tabcontent">
+        <h3>News titi</h3>
+        <p>Some news this fine day!</p>
+    </div>
+
+    <div id="Contact" class="tabcontent">
+        <h3>Contact</h3>
+        <p>Get in touch, or swing by for a cup of coffee.</p>
+    </div>
+
+    <div id="About" class="tabcontent">
+        <h3>About</h3>
+        <p>Who we are and what we do.</p>
+    </div>
+
+    <script>
+        function openPage(pageName, elmnt, color) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].style.backgroundColor = "";
+            }
+            document.getElementById(pageName).style.display = "block";
+            elmnt.style.backgroundColor = color;
+        }
+
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+    </script>
+</body>
+
+</html>
